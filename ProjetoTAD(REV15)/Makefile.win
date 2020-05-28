@@ -1,0 +1,60 @@
+# Project: ProjectFotogametria
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = obj/Debug/ProjectFotogametria_private.res
+OBJ      = obj/Debug/main.o obj/Debug/pfotoga.o obj/Debug/bandas.o obj/Debug/utilidades.o obj/Debug/sis.o obj/Debug/tratamentoDeErros.o obj/Debug/filas.o obj/Debug/arquivos.o obj/Debug/blocks.o obj/Debug/ext_bandas.o $(RES)
+LINKOBJ  = obj/Debug/main.o obj/Debug/pfotoga.o obj/Debug/bandas.o obj/Debug/utilidades.o obj/Debug/sis.o obj/Debug/tratamentoDeErros.o obj/Debug/filas.o obj/Debug/arquivos.o obj/Debug/blocks.o obj/Debug/ext_bandas.o $(RES)
+LIBS     = -L"D:/Programas/Dev-Cpp/MinGW64/lib" -L"D:/Programas/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"D:/Programas/Dev-Cpp/MinGW64/include" -I"D:/Programas/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Programas/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Programas/Dev-Cpp/MinGW64/include" -I"D:/Programas/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Programas/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Programas/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = DefaultProfile/ProjectFotogametria.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+obj/Debug/main.o: main.c
+	$(CC) -c main.c -o obj/Debug/main.o $(CFLAGS)
+
+obj/Debug/pfotoga.o: pfotoga.c
+	$(CC) -c pfotoga.c -o obj/Debug/pfotoga.o $(CFLAGS)
+
+obj/Debug/bandas.o: bandas.c
+	$(CC) -c bandas.c -o obj/Debug/bandas.o $(CFLAGS)
+
+obj/Debug/utilidades.o: utilidades.c
+	$(CC) -c utilidades.c -o obj/Debug/utilidades.o $(CFLAGS)
+
+obj/Debug/sis.o: sis.c
+	$(CC) -c sis.c -o obj/Debug/sis.o $(CFLAGS)
+
+obj/Debug/tratamentoDeErros.o: tratamentoDeErros.c
+	$(CC) -c tratamentoDeErros.c -o obj/Debug/tratamentoDeErros.o $(CFLAGS)
+
+obj/Debug/filas.o: filas.c
+	$(CC) -c filas.c -o obj/Debug/filas.o $(CFLAGS)
+
+obj/Debug/arquivos.o: arquivos.c
+	$(CC) -c arquivos.c -o obj/Debug/arquivos.o $(CFLAGS)
+
+obj/Debug/blocks.o: blocks.c
+	$(CC) -c blocks.c -o obj/Debug/blocks.o $(CFLAGS)
+
+obj/Debug/ext_bandas.o: ext_bandas.c
+	$(CC) -c ext_bandas.c -o obj/Debug/ext_bandas.o $(CFLAGS)
+
+obj/Debug/ProjectFotogametria_private.res: ProjectFotogametria_private.rc 
+	$(WINDRES) -i ProjectFotogametria_private.rc --input-format=rc -o obj/Debug/ProjectFotogametria_private.res -O coff 
+

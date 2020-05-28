@@ -1,0 +1,6 @@
+D:\CAMPOS\2016_08_16_VOO_PLOTS1e3\FPI\RAD_BLOCK_ADJUST_4bandas\DC_CORRECTED
+K00037DC
+
+#Disposição:
+1- Caminho correto para implementar na coluna dos arquivos block_init.
+2- Nome padrão da imagem
