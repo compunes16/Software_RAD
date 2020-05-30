@@ -74,11 +74,11 @@ typedef struct sisrik{
 
 struct band{
 	float dt[25];
-}BAND[10]; //quantidade de tipos de bandas inseridos
+}BAND[10]; // Bandas alocadas na memoria do software
 
 struct band_ext{
-	float dt[25]
-}BAND_EXT[10];
+	float dt[70];
+}BAND_EXT; //Definindo banda com entrada Externa
 
 
 
