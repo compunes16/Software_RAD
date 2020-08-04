@@ -18,7 +18,7 @@ void ext_bandas(char* dados){
 	char str1[5], str2[10];
 	int i = 0, cont = 0, total=0;
 	float dts[30];
-	//double dt;
+	
 	
 	//Iniciando dts: 
 	for(i=0; i < 30; i ++) dts[i] = 0;
@@ -30,37 +30,36 @@ void ext_bandas(char* dados){
 			fclose(arq);
 			system("pause");
 		}else {
-	
+				
+			//Passando dados para o arquivo de saida: 	
 				while ( fgets(leitura,MAX,arq) != NULL) {
-				    strcpy(dados,leitura);
+				    strcat(dados,leitura);
 				 	cont ++;
 				}
 				total = cont -1;
-				printf("1. Qtd - Dados coletados: %i", total);
+				printf("1. Qtd - Dados coletados: %i \n\n", total);				
+				printf("bd dt\n");
 			
 			//Movendo o curso para a segunda linha: 
 				rewind(arq);
 				fseek(arq,7*sizeof(char),SEEK_CUR);
-				printf("\n\n ----- Imprimindo dados gravados do arquivo ------ \n");
+
 			
 			//Gravando Numero da Banda e Valor referente a banda especifica:
 			 //2 - Gravar os dados nas estruturas dts[??];
 				cont = 0;	 
 				while( fscanf(arq,"%s	%s", str1, str2) != EOF ) {
-				//	printf("%s  %s",str1, str2);
+					printf("%s  %s \n",str1, str2);
 					
 					//Necessario trocar dados de "." por "," no windows
 					dts[cont] = atof(str2);
-				//	printf("\t - dts: %.3lf\n",dts[cont]);
 					cont++;
 				}
 				
-			//3- Imprimindo valores referente ao vetor de Dts: 
-				printf("\n\n ------- Imprimindo valores no vetor de DTS ------- \n");
-				
+			//3- Imprimindo valores referente ao vetor de Dts: 			
 				for(i=0; i < total; i++){
 					BAND[10].dt[i] = dts[i];
-					printf("%.3lf\n", BAND[10].dt[i]);
+					//printf("%.3lf\n", BAND[10].dt[i]);
 				}			
     } //end else
 

@@ -128,10 +128,15 @@ void selectMenu() {
 	printf("\n <8> config_laranja_2017_camera_10ms");
 	printf("\n <9> config_laranja_2017_camera_15ms");
 	printf("\n <10> config_citrus_murta_05ms\n");
-	printf("\n <0> Retornar ao Menu Principal");
 	
-	printf("\n Arquivo Externo: ");
+	printf("\n -----------------------");
+	printf("\n --- Arquivo Externo ---");
+	printf("\n -----------------------");
 	printf("\n <11> Abrir");
+	
+	printf("\n\n <0> Retornar ao Menu Principal");
+	
+
 	
 	do {
 		fflush(stdin);
