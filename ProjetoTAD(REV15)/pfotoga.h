@@ -77,7 +77,7 @@ struct band{
 }BAND[10]; // Bandas alocadas na memoria do software
 
 struct band_ext{
-	float dt[70];
+	float dt[60];
 }BAND_EXT; //Definindo banda com entrada Externa
 
 
@@ -115,8 +115,10 @@ void CL2017C05ms(char* dados);
 void CL2017C10ms(char* dados);
 void CL2017C15ms(char* dados);
 void CCM05ms(char* dados);
+void ext_bandas(char* dados);
+
 void exibirArquivo();
-void ext_bandas();
+
 
 // -------------- <3>  Funções POE : TESKFILE(Alocação Dinamica) -------------- 
 

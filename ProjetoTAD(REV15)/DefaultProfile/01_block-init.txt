@@ -1,10 +1,10 @@
 Bits_per_pixel: 16 
 N_Channels: 25 
-Focal: 0,008000 
+Focal: 0.008704 
 Pixel_sz:	0.0000055 
 AbsCalFn: block\abscal.txt 
 BRDF_fn: block\brdf.txt 
-SunZenAz: 0,00 0,00 
+SunZenAz: 54.19 307.36 
 Nbits: 32 
 K00097DC	1	D:\CAMPOS\2016_08_16_VOO_PLOTS1e3\FPI\RAD_BLOCK_ADJUST_4bandas\DC_CORRECTED\K00097DC.dat	block\K00037DC.hdr	block\extor-photoscan-dt.txt	block\sis_rik_v1.txt	block\radpar_init.txt	data\K00000.dat
 K00098DC	1	D:\CAMPOS\2016_08_16_VOO_PLOTS1e3\FPI\RAD_BLOCK_ADJUST_4bandas\DC_CORRECTED\K00098DC.dat	block\K00037DC.hdr	block\extor-photoscan-dt.txt	block\sis_rik_v1.txt	block\radpar_init.txt	data\K00000.dat

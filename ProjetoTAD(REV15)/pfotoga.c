@@ -70,7 +70,8 @@ void selectBandas(int tipo){
 		case  7 : CL2017C05ms(bandadt); break;
 		case  8 : CL2017C10ms(bandadt); break;
 		case  9 : CL2017C15ms(bandadt); break;
-		case  10: CCM05ms(bandadt); break;		
+		case  10: CCM05ms(bandadt); break;
+		case  11: ext_bandas(bandadt); break;		
 	}
 	
 		arq1 = fopen("dt-file.txt","w+");
@@ -362,6 +363,9 @@ float buscaBanda(int banda,int tipodt){
 	
 	//Adicionar verificacao caso o tipo da banda seja externa: 
 	//return BAND_EXT.dt[banda-1];
+	
+	
+	
 }	
 
 

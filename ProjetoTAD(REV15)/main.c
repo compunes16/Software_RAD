@@ -24,8 +24,8 @@ int main () {
 	bandaGravacao();
 		
 	fflush(stdin); 
-	//Menu(F,SK); //Inicio do programa principal
-	ext_bandas(); // Testando as bandas de entrada externas
+	Menu(F,SK); //Inicio do programa principal
+	//ext_bandas(); // Testando as bandas de entrada externas
 
 
 

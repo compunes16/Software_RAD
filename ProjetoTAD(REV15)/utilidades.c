@@ -130,11 +130,14 @@ void selectMenu() {
 	printf("\n <10> config_citrus_murta_05ms\n");
 	printf("\n <0> Retornar ao Menu Principal");
 	
+	printf("\n Arquivo Externo: ");
+	printf("\n <11> Abrir");
+	
 	do {
 		fflush(stdin);
 		printf("\n \n Insira a Opção Desejada : ");
 		scanf("%i",&tipo);
-	} while(tipo < 0 || tipo > 10);
+	} while(tipo < 0 || tipo > 11);
 
 	system("cls");
 	switch (tipo) {
@@ -185,6 +188,11 @@ void selectMenu() {
 			
 		case 10:
 		    printf("\t *** Config_Citrus_Murta_05ms ***");
+		    selectBandas(tipo);
+			break;	
+			
+		case 11:
+		    printf("\t *** Arquivo Externo::  ***");
 		    selectBandas(tipo);
 			break;	
 			
