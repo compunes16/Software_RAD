@@ -17,13 +17,13 @@ void blocks(FILA* F){
 	
 	
 	FILE *bckInit,*bckGrid,*bckUori,*bckBrdf,*bckOrto,*bchOrto,*blockData;	
-	bckInit  =  fopen("01_block-init.txt","w+");    
-	bckGrid  =  fopen("02_block-grid.txt","w+");    
-	bckUori  =  fopen("03_block-uori.txt","w+");    
-	bckBrdf  =  fopen("04_block-brdf-rela.txt","w+");    
-	bckOrto  =  fopen("04_block-orto.txt","w+");    
-	bchOrto  =  fopen("04_batch-orto.txt","w+");    
-	blockData  =  fopen("block-init_data.txt","r+");    
+	bckInit  =  fopen("output/01_block-init.txt","w+");    
+	bckGrid  =  fopen("output/02_block-grid.txt","w+");    
+	bckUori  =  fopen("output/03_block-uori.txt","w+");    
+	bckBrdf  =  fopen("output/04_block-brdf-rela.txt","w+");    
+	bckOrto  =  fopen("output/04_block-orto.txt","w+");    
+	bchOrto  =  fopen("output/04_batch-orto.txt","w+");    
+	blockData  =  fopen("config/block-init_data.txt","r+");    
 	
        
 	fscanf(blockData,"%s\n%s",caminho,auxImage); // Retirando os dados referente aos caminhos repassados;

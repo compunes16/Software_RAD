@@ -1,2 +1,0 @@
-radiometric
-04_block-orto.txt	3	match_param_orto1_bu.txt	mosaic-orto-Camera\sta-ch_Banda-orto.txt	mosaic-orto-Camera\log-ch_Banda-orto.txt	block\DSM-10m.xyz	block\DSM_50cm.asc	mosaic-orto-50cm\rad_tie-block-ch5-orto.txt	mosaic-orto-50cm\orto-block-ch5_50cm.raw	mosaic-orto-50cm\pc-block-ch5-orto.txt	mosaic-orto-50cm\rad_tie-block-ch5-orto.txt	mosaic-orto-Camera\sta-ch_Banda-orto.txt	mosaic-orto-Camera\log-ch_Banda-orto.txt	mosaic-orto-50cm\sd-block-ch5-orto.raw	dummy.txt

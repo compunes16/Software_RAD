@@ -44,7 +44,7 @@ int main () {
 */
 
 
-	
+	printf("** Programa finalizado com seucesso !");
 	printf("\n \n");
 	system("pause");
 	return 0;

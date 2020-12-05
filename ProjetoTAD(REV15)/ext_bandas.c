@@ -1,6 +1,6 @@
 /********************************************************************
- *  @description: Algoritimos que gravam os valores referente ao tipo de camera utilizada suas 
- 			bandas e local mapeado; 		    				
+ *  @description: Algoritimos que gravam os valores referente ao tipo de camera 
+ 	utilizada e suas bandas - Utilizada para um arquivo externo 		    				
  *  @author: Gustavo Serpeloni										
  *  @Professor: Imai							
  *  @Date: 26/05/2020												
@@ -13,7 +13,7 @@
 void ext_bandas(char* dados){
 	setlocale(LC_NUMERIC, "pt_BR");
 	FILE *arq;
-	arq = fopen("banda-dt-2016.txt", "r");
+	arq = fopen("config/banda-ext.txt", "r");
 	char leitura[300];
 	char str1[5], str2[10];
 	int i = 0, cont = 0, total=0;

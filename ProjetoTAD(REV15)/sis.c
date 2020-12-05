@@ -91,7 +91,7 @@ void sisRikBandas(SISRIK *SK,FILA* F) {
 	int i,elem = 1,cont = 0;
 	char caminho;
 	FILE* rikolaData;
-	rikolaData = fopen("rikola_data.txt","r");
+	rikolaData = fopen("config/rikola_data.txt","r");
 
 	printf("\n ---------------------------------------------------------------------------------------- \n");
 	printf("\n \t \t *** CONFIGURAÇÃO DAS BANDAS *** \n");
@@ -132,7 +132,7 @@ void sisRikBandas(SISRIK *SK,FILA* F) {
 	}
 
 	printf("\n\n <3>Retirando dados Sensor 1 [...] \n \n ");
-	arqPOI(SK,banda,"s1.txt",F);
+	arqPOI(SK,banda,"config/s1.txt",F);
 
 
 	//--------------- Sensor 2 -------------
@@ -153,7 +153,7 @@ void sisRikBandas(SISRIK *SK,FILA* F) {
 	}
 
 	printf("\n <4>Retirando dados Sensor 2 [...]");
-	arqPOI(SK,banda,"s2.txt",F);
+	arqPOI(SK,banda,"config/s2.txt",F);
 
 
 
@@ -281,7 +281,7 @@ void arqPOI(SISRIK *SK,int *banda,char *sensor,FILA* F) { // Leitura do arquivo 
 void gerarArquivoRik(SISRIK *SK) {
 
 	FILE* saida;
-	saida = fopen("sis_rik_v1.txt","w+");
+	saida = fopen("outup/sis_rik_v1.txt","w+");
 
 	NO* aux;
 	aux = SK->inicio;

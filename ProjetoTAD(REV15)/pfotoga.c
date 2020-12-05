@@ -20,7 +20,7 @@ void NuvemdePontos() {
 	char dados[70];
 	
 	printf("\n<1> Arquivos DSM_Xm \n");
-	arq = fopen("Dsm_Xm.xyz","r");
+	arq = fopen("input/dsm_ext.xyz","r");
 
 
 	if(arq == NULL) {
@@ -28,8 +28,8 @@ void NuvemdePontos() {
 		NuvemdePontos();
 		system("pause");
 	}else {
-		strcpy(saida,"DSM_Xm.xyz"); 
-		ModificaCaminho(saida); //modificação  do caminho .xyz
+		strcpy(saida,"output/dsm_new.xyz"); 
+		//ModificaCaminho(saida); //modificação  do caminho .xyz
 		printf("\n Saida: %s",saida);
 		arq2 = fopen(saida,"w+"); 
 		
@@ -74,8 +74,8 @@ void selectBandas(int tipo){
 		case  11: ext_bandas(bandadt); break;		
 	}
 	
-		arq1 = fopen("dt-file.txt","w+");
-		arq2 = fopen("tipo.txt","w+");
+		arq1 = fopen("output/dt-file.txt","w+");
+		arq2 = fopen("config/tipo_banda.cfg","w+");
 		
 		fprintf(arq2,"%i",tipo);
 		fputs(bandadt,arq1);
@@ -102,7 +102,7 @@ void leituraPOE(FILA* F){
 	   
 	   
 	printf("\n<!> VERIFICANDO - ARQUIVO (POE.txt) \n");
-	POE = fopen("POE.txt","rt"); 
+	POE = fopen("input/POE.txt","rt"); 
 
 	
 	if(POE == NULL) { // Caso o arquivo esteja vazio
@@ -134,7 +134,7 @@ void leituraPOE(FILA* F){
 		extorFiles(F);
 		printf("\n <1> Arquivo Cube Start Time   - Gerado com Sucesso !! \n \n");		
 		printf("\n <2> Arquivo RadParInit        - Gerado com Sucesso !! \n \n");		
-		printf("\n <3> Arquivo Extor-hotoscan-dt - Gerado com Sucesso !! \n \n");		
+		printf("\n <3> Arquivo Extor-Photoscan-dt - Gerado com Sucesso !! \n \n");		
     }
 }//end MAIN
 
@@ -163,8 +163,8 @@ printf("\n ---------------------------------------------------------------------
 	FILE *arq2,*campo;
 	printf("\n<!> VERIFICANDO - ARQUIVO ( TASKFILE.txt )  \n");
 	//camEntrada(caminho);
-    arq2 = fopen("TASKFILE.TXT","r");	    
-	campo = fopen("tipo.txt","r");
+    arq2 = fopen("input/TASKFILE.txt","r");	    
+	campo = fopen("config/tipo_banda.cfg","r");
 	
 	
 	
@@ -227,16 +227,16 @@ void extorFiles(FILA* F){ // Função :: + Extor-POE + CubeStartTime + Radpar_init
     aux= F->inicio;
     FILE *saida,*CST,*RDP;	
     
-    saida = fopen("extor-photoscan-dt.txt","w+"); // extor file POE
-    CST =   fopen("cube-start-time.txt","w+"); // cube start time
-    RDP =   fopen("radpar-init.txt","w+"); // radpar init
+    saida = fopen("output/extor-photoscan-dt.txt","w+"); // extor file POE
+    CST =   fopen("output/cube-start-time.txt","w+"); // cube start time
+    RDP =   fopen("output/radpar-init.txt","w+"); // radpar init
     
     
     fprintf(saida,"id\tband\ttime\tstatus\tX0\tY0\tZ0\tomega\tphi\tkappa\n");	 //Cabeçalho - Extor_POE_FILE
     fprintf(CST,"ima_id\tcube_start\tvX0\tvY0\tvZ0\tvo\tvp\tvk\n");	 //Cabeçalho - Cube Start Time
  
 	FILE* arqRemov;
-	arqRemov= fopen("Imagens_removidas.txt","wt+");
+	arqRemov= fopen("output/Imagens_removidas.txt","wt+");
 	
         printf("\n <3> PhotosId's Removidos :: \n");
 		while( aux!= NULL ){	  
@@ -323,7 +323,7 @@ void insereRadPar(FILA *F,FILE *RDP){
 	aux = F->inicio;
 	banda1 = aux->Mdados[0];
 	FILE *dataRadpar;
-	dataRadpar = fopen("radpar_data.txt","rt");
+	dataRadpar = fopen("config/radpar_data.txt","rt");
 	
 printf("\n ---------------------------------------------------------------------------------------- \n");	
 	printf("<!!> Gerando Arquivo RadPar.txt : \n");	
